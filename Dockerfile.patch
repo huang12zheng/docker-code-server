@@ -1,0 +1,7 @@
+FROM linuxserver/code-server
+
+RUN apt-get update
+RUN apt install snapd
+COPY /root /
+
+VOLUME [ "/config/extensions" ]
