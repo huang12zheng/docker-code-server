@@ -23,3 +23,15 @@ exec \
             --auth "${AUTH}" \
             "${PROXY_DOMAIN_ARG}" \
             "${DEFAULT_WORKSPACE:-/config/workspace}"
+
+for i in $(cd "/config/extensions" >/dev/null && echo ./*.vsix); do
+    if [ -t 0 ]; then
+      printf "." >&2
+    fi
+
+    if ! [ -e "/tmp/extensions/$i" ]; then
+        install-extension $i
+
+        touch /tmp/extensions/$i
+    fi
+done
