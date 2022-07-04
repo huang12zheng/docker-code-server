@@ -15,4 +15,5 @@
   "plantuml.exportFormat": "svg",
   "terminal.integrated.copyOnSelection": true,
   "rust-analyzer.inlayHints.maxLength": 50,
+  "terminal.integrated.defaultProfile.linux": "zsh",
 }
