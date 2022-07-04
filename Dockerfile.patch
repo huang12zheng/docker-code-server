@@ -3,6 +3,4 @@ FROM linuxserver/code-server
 RUN apt-get update
 COPY /root /
 
-RUN git clone --branch config https://github.com/huang12zheng/docker-code-server /config
-
 VOLUME [ "/vsix" ]

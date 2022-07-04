@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bash
 
+git clone --branch config https://github.com/huang12zheng/docker-code-server /config
+
 mkdir -p /config/{extensions,data,workspace,.ssh}
 mkdir -p /tmp/extensions
 chown -R abc:abc /tmp/extensions
