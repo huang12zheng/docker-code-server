@@ -1,6 +1,8 @@
 FROM linuxserver/code-server
 
 RUN apt-get update
+RUN apt-get install tree
+
 COPY /root /
 
 VOLUME [ "/vsix" ]
