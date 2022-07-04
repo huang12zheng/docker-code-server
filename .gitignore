@@ -1,0 +1,26 @@
+workspace/**
+
+.config/code-server/config.yaml
+.local/share/code-server/heartbeat
+.local/share/code-server/machineid
+.local/share/code-server/CachedExtensionVSIXs/dart-code.dart-code-3.44.0
+.local/share/code-server/coder-logs/code-server-stderr.log
+.local/share/code-server/coder-logs/code-server-stdout.log
+.local/share/**/remoteagent.log
+data/coder.json
+data/machineid
+data/User/machineid
+data/CachedExtensions/builtin
+data/logs/**/remoteagent.log
+data/logs/**/exthost.log
+data/logs/**/*-GitLens.log
+data/logs/**/*-Git.log
+data/logs/**/*-JSON Language Server.log
+data/User/customBuiltinExtensionsCache.json
+data/User/systemExtensionsCache.json
+data/User/caches/CachedConfigurations/**/configuration.json
+data/User/workspaceStorage/**/meta.json
+data/User/workspaceStorage/**/vscode.lock
+
+data/User/History/**
+data/CachedExtensions/user
