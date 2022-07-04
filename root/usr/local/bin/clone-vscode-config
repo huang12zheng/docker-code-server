@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+if [ -e /config/.git ]; then
+    cd /config/
+    git pull
+else
+    git clone --branch config ${CODER_GIT_CONFIG:-https://github.com/huang12zheng/docker-code-server} /tmp/confg \
+    && chown -R abc:abc /tmp/confg \
+    && cp -rp /tmp/confg/. /config/
+fi

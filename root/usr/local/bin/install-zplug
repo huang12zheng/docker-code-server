@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+# export ZPLUG_HOME=$HOME/.zplug
+# if [ ! -e $ZPLUG_HOME ]; then
+# echo $ZPLUG_HOME
+# git clone --depth 1 https://github.com/zplug/zplug $ZPLUG_HOME &&\
+#     source $ZPLUG_HOME/init.zsh &&\
+#     chown -R abc:abc $ZPLUG_HOME
+#     echo "FINISH ZSH"
+# fi
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+chown -R abc:abc $HOME/.zplug

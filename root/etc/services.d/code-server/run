@@ -15,6 +15,10 @@ fi
 
 cd /vsix
 for i in $(cd "/vsix" >/dev/null && echo ./*.vsix); do
+    if [ "$i" == "./*.vsix" ]; then
+        echo "There are no vsix files"
+        break
+    fi
     if [ -t 0 ]; then
       printf "." >&2
     fi
@@ -24,8 +28,11 @@ for i in $(cd "/vsix" >/dev/null && echo ./*.vsix); do
     fi
 done
 
-git clone --branch config ${GIT_CONFIG:-https://github.com/huang12zheng/docker-code-server} /tmp/confg
-cp /tmp/confg/* /config/
+
+install-zplug&
+clone-vscode-config
+
+echo "Getted CODER_GIT_CONFIG"
 
 exec \
     s6-setuidgid abc \
@@ -36,6 +43,7 @@ exec \
             --disable-telemetry \
             --auth "${AUTH}" \
             "${PROXY_DOMAIN_ARG}" \
-            "${DEFAULT_WORKSPACE:-/config/workspace}"
+            "${DEFAULT_WORKSPACE:-/config}"
+            # "${DEFAULT_WORKSPACE:-/config/workspace}"
 
 
