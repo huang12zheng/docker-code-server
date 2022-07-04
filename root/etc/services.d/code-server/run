@@ -13,6 +13,17 @@ else
     PROXY_DOMAIN_ARG="--proxy-domain=${PROXY_DOMAIN}"
 fi
 
+cd /vsix
+for i in $(cd "/vsix" >/dev/null && echo ./*.vsix); do
+    if [ -t 0 ]; then
+      printf "." >&2
+    fi
+
+    if ! [ -e "/tmp/extensions/$i" ]; then
+        install-extension $i && touch /tmp/extensions/$i &
+    fi
+done
+
 exec \
     s6-setuidgid abc \
         /app/code-server/bin/code-server \
@@ -24,14 +35,4 @@ exec \
             "${PROXY_DOMAIN_ARG}" \
             "${DEFAULT_WORKSPACE:-/config/workspace}"
 
-for i in $(cd "/config/extensions" >/dev/null && echo ./*.vsix); do
-    if [ -t 0 ]; then
-      printf "." >&2
-    fi
 
-    if ! [ -e "/tmp/extensions/$i" ]; then
-        install-extension $i
-
-        touch /tmp/extensions/$i
-    fi
-done

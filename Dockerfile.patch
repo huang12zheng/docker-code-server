@@ -1,7 +1,8 @@
 FROM linuxserver/code-server
 
 RUN apt-get update
-RUN apt install snapd
 COPY /root /
 
-VOLUME [ "/config/extensions" ]
+RUN git clone --branch config https://github.com/huang12zheng/docker-code-server /config
+
+VOLUME [ "/vsix" ]
