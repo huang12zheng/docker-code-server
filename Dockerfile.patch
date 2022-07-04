@@ -3,10 +3,15 @@
 
 FROM linuxserver/code-server
 # nix repo (include pkgs) would too slow
-RUN apt-get update
-RUN apt-get install -y tree zsh fzf
+# There is no lsb_release, just use /etc/os-release
+RUN cat /etc/os-release
 
 COPY /root /
+RUN chmod 777 /tmp
+
+RUN --mount=type=cache,target=/var/cache/apt apt-get update -y && \
+  apt-get install -y tree zsh fzf nnn aria2 mtr vim
+
 
 # COPY --from=zsh_source /usr/bin/zsh /usr/bin/zsh
 
