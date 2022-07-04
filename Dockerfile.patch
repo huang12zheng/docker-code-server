@@ -4,7 +4,7 @@
 FROM linuxserver/code-server
 # nix repo (include pkgs) would too slow
 RUN apt-get update
-RUN apt-get install -y tree zsh
+RUN apt-get install -y tree zsh fzf
 
 COPY /root /
 
