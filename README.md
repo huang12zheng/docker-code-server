@@ -16,7 +16,7 @@ docker run -d \
   -p $port:8443 \
   --restart unless-stopped \
   -v /Users/huangzheng/Container/vscode-server/vsix:/vsix/ \
-  my-coder
+  hzgood/my-coder
   # -e CODER_GIT_CONFIG=http://gitea.x.cool/Re0/docker-code-server.git \
 ```
 

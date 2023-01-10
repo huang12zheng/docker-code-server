@@ -36,3 +36,5 @@ else
     chown -R abc:abc "$(ls /config -I workspace)"
     chown abc:abc /config/workspace
 fi
+
+chown -R abc:abc /tmp
