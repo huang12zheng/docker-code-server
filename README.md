@@ -1,5 +1,5 @@
 ```bash
-export DOCKER_BUILDKIT=1; docker build -t my-coder -f Dockerfile.patch .
+export DOCKER_BUILDKIT=1; docker build -t hzgood/my-coder -f Dockerfile.patch .
 # docker push hzgood/my-coder
 
 port=37$(($RANDOM%100+100))
