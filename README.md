@@ -1,5 +1,6 @@
 ```bash
 export DOCKER_BUILDKIT=1; docker build -t my-coder -f Dockerfile.patch .
+# docker push hzgood/my-coder
 
 port=37$(($RANDOM%100+100))
 echo "port is: $port"
@@ -30,7 +31,7 @@ docker run -d \
 * run
 启动时先默认是从 /config 开始的
 install-zplug&
-clone-vscode-config (从github下载配置)
+clone-vscode-config (从github下载配置,如果CODER_GIT_CONFIG为空的话.)
 
 vsix 应该是你主机上的保存下来的vsix.避免下载
 * 30-config
