@@ -47,10 +47,10 @@ if ! zplug check --verbose; then
     fi
 fi
 command -v fzf &> /dev/null || sudo apt install fzf
-command -v kuben &> /dev/null || (
-    sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx --depth=1 && \
-    sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx && \
-    sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
-)
+# command -v kuben &> /dev/null || (
+#     sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx --depth=1 && \
+#     sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx && \
+#     sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+# )
 zplug load
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
