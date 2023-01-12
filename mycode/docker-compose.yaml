@@ -2,7 +2,7 @@
 version: "3.9"
 services:
   ide: # replace
-    image: mycode-server:latest
+    image: hzgood/mycode-server:latest
     # container_name: code-server
     environment:
         # linuxserver/mods:code-server-flutter|
@@ -38,7 +38,7 @@ services:
       # - PROXY_DOMAIN: code-server.my.domain #optional
       # - DEFAULT_WORKSPACE: /config/workspace #optional
     volumes:
-      - /Users/huangzheng/Container/lists:/var/lib/apt/lists
+      - /c/Users/hzgood/Container/lists:/var/lib/apt/lists
     #   - /path/to/appdata/config:/config
     ports:
       - 8443:8443 # replace
