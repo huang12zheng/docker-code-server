@@ -1,0 +1,45 @@
+---
+version: "3.9"
+services:
+  code-server: # replace
+    image: lscr.io/linuxserver/code-server:latest
+    # container_name: code-server
+    environment:
+        # linuxserver/mods:code-server-flutter|
+        # linuxserver/mods:code-server-|
+        # linuxserver/mods:code-server-|
+        # linuxserver/mods:universal-zplug|
+        # linuxserver/mods:code-server-rust|
+      # can't use:
+        # hzgood/mod:code-server-flutter|  only ablitity is ci/cd
+      # use:
+      DOCKER_MODS:
+        linuxserver/mods:code-server-zsh|
+        hzgood/mods:vscode-global-config|
+        hzgood/mods:cn-apt-source|
+        linuxserver/mods:universal-package-install|
+        hzgood/mod:code-server-rust|
+        hzgood/mod:universal-zplug|
+      INSTALL_PACKAGES:
+        tree|
+        zsh|
+        git|
+        fzf|
+        mtr|
+        vim|
+        nnn
+      PUID: 1000
+      PGID: 1000
+      TZ: Asia/Shanghai
+      PASSWORD: 1
+      # - HASHED_PASSWORD:  #optional
+      SUDO_PASSWORD: 1
+      # - SUDO_PASSWORD_HASH:  #optional
+      # - PROXY_DOMAIN: code-server.my.domain #optional
+      # - DEFAULT_WORKSPACE: /config/workspace #optional
+    volumes:
+      - /Users/huangzheng/Container/lists:/var/lib/apt/lists
+    #   - /path/to/appdata/config:/config
+    ports:
+      - 8443:8443 # replace
+    restart: unless-stopped
