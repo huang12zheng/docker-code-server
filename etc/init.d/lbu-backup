@@ -1,0 +1,9 @@
+#!/bin/sh
+# Backup to remote target in diskless
+HOST="ubuntu@pi4-01"
+#
+TGT_FILE="/var/www/html/$(hostname).apkovl.tar.gz"
+echo "  Backup to $HOST:$TGT_FILE ..."
+lbu pkg -|ssh -o StrictHostKeyChecking="No" $HOST "cat - > $TGT_FILE"
+echo "  Done"
+sleep 5
