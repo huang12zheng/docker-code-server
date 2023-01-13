@@ -1,0 +1,4 @@
+etc/wpa_supplicant/wpa_supplicant.conf
+etc/ssh/ssh_host_dsa_key
+etc/ssh/ssh_host_ecdsa_key
+home/clash/config.yaml

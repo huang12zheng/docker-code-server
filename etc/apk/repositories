@@ -1,2 +1,6 @@
-http://mirrors.nju.edu.cn/alpine/edge/main/
-http://mirrors.nju.edu.cn/alpine/edge/community/
+#/media/dm-0/apks
+http://mirrors.ustc.edu.cn/alpine/v3.16/main
+http://mirrors.ustc.edu.cn/alpine/v3.16/community
+#http://mirrors.ustc.edu.cn/alpine/edge/community
+#http://mirrors.ustc.edu.cn/alpine/edge/community
+#http://mirrors.ustc.edu.cn/alpine/edge/testing

@@ -1,4 +1,4 @@
-root:$6$wXXvqnnRDtfX8kjP$B.gH/5NilSgluvVVqZlIEX/9SqCuPc3yOLKPpsuizoihqLYnS6x5eGHydf3wpI2AAW2ZD3RBV4N2d71FSjGSs1:19138:0:::::
+root:$6$8JUweKaRu6VJ8fE7$jSEG3tKCuN0hLuLZHQ.a07iZrGRpTWJrkIAyixSSGYZNcRH3wepc51khPtzKdMU1WLkT2vAhZ.tMLk5G9tUj6/:19370:0:::::
 bin:!::0:::::
 daemon:!::0:::::
 adm:!::0:::::
@@ -25,7 +25,5 @@ ntp:!::0:::::
 smmsp:!::0:::::
 guest:!::0:::::
 nobody:!::0:::::
-chrony:!:19114:0:99999:7:::
-avahi:!:19138:0:99999:7:::
-messagebus:!:19138:0:99999:7:::
-axu:!:19138:0:99999:7:::
+chrony:!:19370:0:99999:7:::
+ubuntu:!:19370:0:99999:7:::

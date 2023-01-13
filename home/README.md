@@ -1,0 +1,1 @@
+https://wener.me/notes/os/alpine/boot

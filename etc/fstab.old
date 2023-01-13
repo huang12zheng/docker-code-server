@@ -1,0 +1,3 @@
+/dev/cdrom	/media/cdrom	iso9660	noauto,ro 0 0
+/dev/usbdisk	/media/usb	vfat	noauto,ro 0 0
+UUID=34e16242-a623-43cd-a460-8f8076ba67c5	swap		swap	defaults 0 0
