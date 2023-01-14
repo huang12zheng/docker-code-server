@@ -46,7 +46,12 @@ if ! zplug check --verbose; then
         echo
     fi
 fi
-command -v fzf &> /dev/null || sudo apt install fzf
+
+command -v fzf &> /dev/null || if [ ! command -v apt ]; then
+        sudo apt install fzf
+    else 
+        doas apk add fzf
+    fi
 # command -v kuben &> /dev/null || (
 #     sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx --depth=1 && \
 #     sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx && \
